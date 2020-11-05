@@ -31,7 +31,7 @@ Also, postman web service request and response screenshots are provided
 
 Deploy App to S3
 
-This is a work in progress. Faced a few issues with the ajax post request from frontend. I will update this soon.
+This is a work in progress. Faced a few issues with the ajax post request from frontend. I will update this soon. I have a partial working index.html code with Ajax
 
 
 
