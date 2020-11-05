@@ -24,7 +24,9 @@ Deploy Lambda
 4. Deploy the api and test the webservice using postman. 
 
 Url: https://fku4xsr83b.execute-api.us-east-2.amazonaws.com/test/predict
-Please check requests.txt for a sample request format.
+Please check api_request.txt for a sample request format.
+
+Also, postman web service request and response screenshots are provided
 
 
 Deploy App to S3
