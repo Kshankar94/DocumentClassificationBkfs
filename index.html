@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<<<<<<< Updated upstream
-        <title>Sentiment Analysis Web App</title>
-=======
+
         <title>Document classification with Stochastic gradient classifier</title>
->>>>>>> Stashed changes
         <meta charset="utf-8">
         <meta name="viewport"  content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<<<<<<< Updated upstream
         <script>
          $(document).ready(function(){
 
@@ -22,76 +18,31 @@
                 event.preventdefault()
                 console.log(data)
 
-
-            //     $.ajax({
-            //     type: "POST",
-
-            //     contentType : "application/json",
-
-            //     data: JSON.stringify(data),
-
-            //     url:"https://fku4xsr83b.execute-api.us-east-2.amazonaws.com/test/predict",
-
-            //     success: function(data){
-            //         console.log("success", data)
-            //     },
-
-            //     error:function(data){
-            //         console.log("error", data)
-            //     }
-               
-
-            // })
-
          });
         </script>
-=======
-
->>>>>>> Stashed changes
         <style>
-
         </style>
 
     </head>
     <body>
 
         <div class="container">
-<<<<<<< Updated upstream
-            <h1>Is your review positive, or negative?</h1>
-            <p>Enter your review below and click submit to find out...</p>
-            <form method="POST">                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+            <p>Enter your document and predict its doc type</p>
+            <form method="POST">                     
                 <div class="form-group">
-                    <label for="review">Review:</label>
-                    <textarea class="form-control" placeholder="Please write your review here..." rows="5" id="review"></textarea>
+                    <label for="doc">Document:</label>
+                    <textarea class="form-control" placeholder="Please input your document..." rows="5" id="review"></textarea>
                 </div>
                 <button type="submit" class="btn btn-default" id = "submit">Submit</button>
-=======
-            <h3>Predict a document type</h3>
-            <p>Enter csv kind of an input string (eg. "words1....\nwords2</p>
-            <form id = "Form">                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
-                <div class="form-group">
-                    <label for="review">Document content:</label>
-                <textarea class="form-control" placeholder="Please write your review here..." rows="5" id="review"></textarea>
-                </div>
-                <button type="submit" class="btn btn-default" id = "submitForm">Submit</button>
->>>>>>> Stashed changes
-            </form>
-           
-            
             </div>
         </div>
     </body>
-<<<<<<< Updated upstream
-=======
 
 
      <script>
-        
-            
-
             $("#submitForm").click(function(event){
                 const data = {
-                    body : $("#review").val(),
+                    body : $("#document").val(),
                     key: ""
                 }
                 event.preventDefault()
@@ -123,6 +74,4 @@
             });
 
         </script>
-
->>>>>>> Stashed changes
 </html>
