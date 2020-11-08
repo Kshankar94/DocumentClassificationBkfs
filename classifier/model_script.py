@@ -67,7 +67,9 @@ if __name__ == "__main__":
     (X_train, X_val, y_train, y_val) = train_test_split(
         X_train, y_train, test_size=0.10, random_state=1
     )
-
+    
+    
+    # calibrated classifier to get the confidence score (probability)
     base_model = SGDClassifier(max_iter=1000, tol=1e-3)
 
     sgd_model = CalibratedClassifierCV(base_model)
