@@ -23,10 +23,17 @@ def lambda_handler(event, context):
     
     runtime= boto3.client('runtime.sagemaker')
     data = json.loads(json.dumps(event))
-    payload = data['body']
     
-    result_object = {}
+    error = "body field is required in the request json"
+    
+    if('body' not in data):
+        response_object = response_object_creation()
+        response_object['body'] = error
+        return response_object
         
+    
+    payload = data['body']
+       
     # if a request doesn't request for a csv to be uploaded, we return the prediction for the text that's provided in a text area (UI) 
     if('key' in event and not event['key']):
         response = runtime.invoke_endpoint(EndpointName= ENDPOINT_NAME ,Body= payload, ContentType='text/csv', Accept = 'application/json')
